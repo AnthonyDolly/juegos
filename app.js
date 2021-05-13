@@ -112,3 +112,28 @@ const agregarElementos = (n, j) => {
     currentDiv.appendChild(div);
 
 }
+
+
+function Contadora (cont){
+    return cont;
+}
+
+
+
+// let botonEnviar = document.getElementById('myBtn');
+// // botonEnviar.addEventListener('click', () => {
+function enviar2(){
+    // console.log(cont);
+    for(let i = 0; i < 5; i++){
+        let inputText = document.getElementById('respuesta').value,
+        inputCorrect = document.getElementById('respuestaCorrecta').value;
+        console.log('hola');
+        console.log(inputText);
+        console.log(inputCorrect);      
+    }
+}
+
+// });
+
+
+

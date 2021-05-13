@@ -1,38 +1,66 @@
+
+
+<?php 
+    $conexion = mysqli_connect('localhost','root','','juego');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntas</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
 </head>
+
 
 <body>
     <div id="main-container">
-        <h1 id="nivel">Nivel 1</h1>
+        <?php 
+            $sql = "SELECT * FROM  preguntas";
+            $result = mysqli_query( $conexion, $sql);
+            while( $mostrar = mysqli_fetch_array($result) ){
+        ?>
         <div class="container" id="container">
             <div class="pregunta-1 p">
-                <h2>Pregunta 1</h2>
-                <p>¿Cuánto es 7 + 2?</p>
+                <h2>Pregunta <?php echo $mostrar['id']?>  </h2>              
+                <p> <?php echo $mostrar['descripcion']?>  </p>
                 <p>
-                    <input type="radio" class="respuesta" name="respuesta" id="respuesta-1.1">
-                    <label for="respuesta-1.1">Respuesta 1</label>
-                    <input type="radio" class="respuesta" name="respuesta" id="respuesta-1.2">
-                    <label for="respuesta-1.2">Respuesta 2</label>
-                    <input type="radio" class="respuesta" name="respuesta" id="respuesta-1.3">
-                    <label for="respuesta-1.3">Respuesta 3</label>
-                    <input type="radio" class="respuesta" name="respuesta" id="respuesta-1.4">
-                    <label for="respuesta-1.4">Respuesta 4</label>
-                    <input type="radio" class="respuesta" name="respuesta" id="respuesta-1.5">
-                    <label for="respuesta-1.5">Respuesta 5</label>
+                   
+                <?php 
+                    if($mostrar){ ?>
+                        <script type="text/javascript">
+                            var conta = '<?php echo $mostrar['id']?> '
+                        </script>  
+                        
+                        <?php 
+                            echo '
+                            <script type="text/javascript">
+
+                                console.log(Contadora(conta));
+                                
+                            </script> '
+                            ;
+                    }?>
+                    <input autocomplete="off" type="text" name="respuesta" id="<?php echo $mostrar['id']?>;">
+                    <input style="display: none;" autocomplete="off" value="<?php echo $mostrar['respuesta']?>" id="respuestaCorrecta">
                 </p>
+               
             </div>
-            <input type="button" value="Enviar" onclick="enviar()" id="myBtn">
         </div>
+        <?php 
+            }    
+        ?>
+        <input type="button" value="Enviar" onclick="enviar2()" id="myBtn">
     </div>
-    <script src="app.js"></script>
+
+    <!-- <script src="app.js"></script>        -->
+   
 </body>
 
 </html>
+
+
+

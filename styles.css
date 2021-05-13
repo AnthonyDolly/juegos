@@ -9,11 +9,12 @@ h1 {
 }
 
 .container {
-    padding: 1em;
+    padding: 0 1em;
 }
 
 .p {
     margin-bottom: 1em;
+    padding: 15px;
     background-color: rgb(41, 138, 194);
     box-shadow: 5px 5px 8px rgb(41, 138, 194);
 }
@@ -28,4 +29,28 @@ input[type="button"] {
     background-color: cornflowerblue;
     border: none;
     border-radius: 4px;
+    width: 40%;
+    margin: 4rem auto;
+    display: block;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 5px;
+}
+input[type="button"]:hover{
+    background-color: #082352;
+    color: #fff;
+}
+#main-container{
+    max-width: 700px;
+    margin: 3rem auto;
+}
+#main-container input[type="text"]{
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px ;
+    border: none;
+}
+#main-container h1{
+    padding: 10px 30px;
+
 }
