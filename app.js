@@ -125,36 +125,48 @@ const almacenarRC = (respuestasCorrectas) => {
 
     respuestasC = respuestasCorrectas;
 
+    // let arr = [] 
+    // arr.push(respuestasC)
     console.log(respuestasC);
-    return respuestasC;
+    // return respuestasC;
 }
 
-puntos = 0;
-const compararRespuestas = () => {
-    for (i = 0; i < 10; i++) {
-        if (respuestasE[i] == respuestasC[i]) {
-            console.log(respuestasE[0])
-            console.log(respuestasC[0])
+
+//puntos = 0;
+const compararRespuestas = (arr2) => {
+    console.log(respuestasC);
+    console.log(arr2);
+    let puntos = 0;
+    for (j = 0; j < 10; j++) {
+        // console.log(respuestasC[j], arr2[j]);
+        if( (respuestasC[j] == arr2[j])){
             puntos = puntos + 2;
         } else {
             puntos = puntos + 0;
         }
+     
     }
-    console.log("Tienes " + puntos + " puntos")
+    alert(`Tienes ${ puntos } puntos`)
+
+
+}
+
+
+function enviar2() {
+    respuestasE = [];
+    var arr2 = [];
+    for (var i = 1; i <= 10; i++) {
+        respuestasE = document.getElementById(`respuesta${i}`).value;
+        console.log(respuestasE)
+        arr2.push(respuestasE)
+    }
+    console.log(arr2)
+    compararRespuestas(arr2);
 }
 
 
 // let botonEnviar = document.getElementById('myBtn');
 // // botonEnviar.addEventListener('click', () => {
-function enviar2() {
-    respuestasE = [];
-    for (i = 1; i <= 10; i++) {
-        respuestasE = document.getElementById(`respuesta${i}`).value;
-        console.log(respuestasE)
-    }
-
-    compararRespuestas();
-}
 
 
 // });

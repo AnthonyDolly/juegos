@@ -24,6 +24,10 @@ $conexion = mysqli_connect('localhost', 'root', '', 'juego');
                 LIMIT 10;";
         $result = mysqli_query($conexion, $sql);
         $i = 0;
+        echo '
+        <script type="text/javascript">
+            var arr = [];
+        </script> ';
         while ($mostrar = mysqli_fetch_array($result)) {
             $i++;
         ?>
@@ -37,16 +41,16 @@ $conexion = mysqli_connect('localhost', 'root', '', 'juego');
                         if ($mostrar) { ?>
                             <script type="text/javascript">
                                 var i = '<?php echo $i ?> '
-                                var respuestasC = '<?php echo $mostrar['respuesta'] ?> '
+                                var respuestasC = '<?php echo $mostrar['respuesta']?>'
+                                // var arr = [];
+                                arr.push(respuestasC);
+                                // console.log(arr);
                                 var respuestaE = document.getElementById(`respuesta${i}`)
-                            </script>
+                                </script>
 
                         <?php
                             echo '
                             <script type="text/javascript">
-
-                                almacenarRC(respuestasC);
-                                
                             </script> ';
                         } ?>
 
@@ -58,8 +62,17 @@ $conexion = mysqli_connect('localhost', 'root', '', 'juego');
         <?php
         }
         ?>
+        <?php
+            echo '
+            <script type="text/javascript">
+            //   console.log(arr);
+              almacenarRC(arr);
+            </script> ';
+        ?>
+
         <input type="button" value="Enviar" onclick="enviar2()" id="myBtn">
     </div>
+
 
     <!-- <script src="app.js"></script>        -->
 
