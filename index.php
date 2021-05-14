@@ -22,7 +22,7 @@
         <li><a class="waves-effect waves-light btn-small light-blue lighten-1 modal-trigger" href="#modalRegister">Registrarse</a></li>
       </ul>
     </div>
-    <div class="nav-content col s12 m6 right">
+    <div class="nav-content col s12 l4 right">
       <ul id="nav-mobile" class="tabs tabs-transparent right ">
         <li class="tab"><a class="active" href="#test1">Inicio</a></li>
         <li class="tab"><a href="#test2">Preguntas</a></li>

@@ -16,122 +16,146 @@
 
 boton = document.getElementById('myBtn');
 
-function enviar() {
-    contador = 1;
-    boton.onclick = function () {
-        contador++;
-        switch (contador) {
-            case 1:
-                agregarElementos(1, 1);
-                break;
-            case 2:
-                agregarElementos(2, 2);
-                break;
-            case 3:
-                agregarElementos(3, 3);
-                break;
-            case 4:
-                agregarElementos(4, 4);
-                break;
-            case 5:
-                agregarElementos(5, 5);
-                break;
-            case 6:
-                agregarElementos(6, 6);
-                break;
-            case 7:
-                agregarElementos(7, 7);
-                break;
-            case 8:
-                agregarElementos(8, 8);
-                break;
-            case 9:
-                agregarElementos(9, 9);
-                break;
-            case 10:
-                agregarElementos(10, 10);
-                break;
-            default:
-                break;
+// function enviar() {
+//     contador = 1;
+//     boton.onclick = function () {
+//         contador++;
+//         switch (contador) {
+//             case 1:
+//                 agregarElementos(1, 1);
+//                 break;
+//             case 2:
+//                 agregarElementos(2, 2);
+//                 break;
+//             case 3:
+//                 agregarElementos(3, 3);
+//                 break;
+//             case 4:
+//                 agregarElementos(4, 4);
+//                 break;
+//             case 5:
+//                 agregarElementos(5, 5);
+//                 break;
+//             case 6:
+//                 agregarElementos(6, 6);
+//                 break;
+//             case 7:
+//                 agregarElementos(7, 7);
+//                 break;
+//             case 8:
+//                 agregarElementos(8, 8);
+//                 break;
+//             case 9:
+//                 agregarElementos(9, 9);
+//                 break;
+//             case 10:
+//                 agregarElementos(10, 10);
+//                 break;
+//             default:
+//                 break;
+//         }
+//     }
+
+// }
+
+// const agregarElementos = (n, j) => {
+
+//     h1 = document.createElement('H1');
+//     h1.innerHTML = `Nivel ${n}`;
+
+
+//     div = document.createElement('div');
+//     div.className = `Pregunta-${n} p`;
+
+
+//     h2 = document.createElement('H2');
+//     h2.innerHTML = `Pregunta ${n}`;
+
+
+//     p = document.createElement('P');
+//     p.className = 'pr';
+//     p.innerHTML = `Preguntas random ${n}`;
+
+
+//     p2 = document.createElement('P');
+
+
+//     button = document.createElement('INPUT');
+
+
+//     for (i = 1; i <= 5; i++) {
+
+//         input = document.createElement('INPUT');
+//         input.setAttribute('type', 'radio');
+//         input.name = 'respuesta'
+//         input.className = 'respuesta';
+//         input.id = `respuesta-${j + '.' + i}`;
+
+
+
+//         label = document.createElement('LABEL');
+//         label.setAttribute('for', `respuesta-${j + '.' + i}`);
+//         labelTexto = document.createTextNode(`respuesta ${i}`);
+//         label.appendChild(labelTexto);
+
+
+//         p2.insertBefore(label, document.getElementById(`respuesta-${j + '.' + i}`));
+//         p2.appendChild(input);
+
+//     }
+
+//     div.appendChild(h2);
+//     div.appendChild(p);
+//     div.appendChild(p2);
+
+//     const currentDiv = document.getElementById("container");
+//     currentDiv.appendChild(div);
+
+// }
+
+
+// function Contadora (cont){
+//     return cont;
+// }
+
+
+// puntos = 0;
+const almacenarRC = (respuestasCorrectas) => {
+    respuestasC = [];
+
+    respuestasC = respuestasCorrectas;
+
+    console.log(respuestasC);
+    return respuestasC;
+}
+
+puntos = 0;
+const compararRespuestas = () => {
+    for (i = 0; i < 10; i++) {
+        if (respuestasE[i] == respuestasC[i]) {
+            console.log(respuestasE[0])
+            console.log(respuestasC[0])
+            puntos = puntos + 2;
+        } else {
+            puntos = puntos + 0;
         }
     }
-
+    console.log("Tienes " + puntos + " puntos")
 }
-
-const agregarElementos = (n, j) => {
-
-    h1 = document.createElement('H1');
-    h1.innerHTML = `Nivel ${n}`;
-
-
-    div = document.createElement('div');
-    div.className = `Pregunta-${n} p`;
-
-
-    h2 = document.createElement('H2');
-    h2.innerHTML = `Pregunta ${n}`;
-
-
-    p = document.createElement('P');
-    p.className = 'pr';
-    p.innerHTML = `Preguntas random ${n}`;
-
-
-    p2 = document.createElement('P');
-    
-
-    button = document.createElement('INPUT');
-    
-
-    for (i = 1; i <= 5; i++) {
-
-        input = document.createElement('INPUT');
-        input.setAttribute('type', 'radio');
-        input.name = 'respuesta'
-        input.className = 'respuesta';
-        input.id = `respuesta-${j + '.' + i}`;
-
-
-
-        label = document.createElement('LABEL');
-        label.setAttribute('for', `respuesta-${j + '.' + i}`);
-        labelTexto = document.createTextNode(`respuesta ${i}`);
-        label.appendChild(labelTexto);
-
-
-        p2.insertBefore(label, document.getElementById(`respuesta-${j + '.' + i}`));
-        p2.appendChild(input);
-
-    }
-
-    div.appendChild(h2);
-    div.appendChild(p);
-    div.appendChild(p2);
-
-    const currentDiv = document.getElementById("container");
-    currentDiv.appendChild(div);
-
-}
-
-
-function Contadora (cont){
-    return cont;
-}
-
 
 
 // let botonEnviar = document.getElementById('myBtn');
 // // botonEnviar.addEventListener('click', () => {
-function enviar2(){
-    // console.log(cont);
-    for(let i = 0; i < 5; i++){
-        let inputText = document.getElementById('respuesta').value,
-        inputCorrect = document.getElementById('respuestaCorrecta').value;
-        console.log('hola');
-        console.log(inputText);
-        console.log(inputCorrect);      
+function enviar2() {
+    respuestasE = [];
+    for (i = 1; i <= 10; i++) {
+        respuestasE = document.getElementById(`respuesta${i}`).value;
+        console.log(respuestasE)
     }
+
+    compararRespuestas();
 }
+
 
 // });
 
