@@ -41,12 +41,12 @@ $conexion = mysqli_connect('localhost', 'root', '', 'juego');
                         if ($mostrar) { ?>
                             <script type="text/javascript">
                                 var i = '<?php echo $i ?> '
-                                var respuestasC = '<?php echo $mostrar['respuesta']?>'
+                                var respuestasC = '<?php echo $mostrar['respuesta'] ?>'
                                 // var arr = [];
                                 arr.push(respuestasC);
                                 // console.log(arr);
                                 var respuestaE = document.getElementById(`respuesta${i}`)
-                                </script>
+                            </script>
 
                         <?php
                             echo '
@@ -63,7 +63,7 @@ $conexion = mysqli_connect('localhost', 'root', '', 'juego');
         }
         ?>
         <?php
-            echo '
+        echo '
             <script type="text/javascript">
             //   console.log(arr);
               almacenarRC(arr);

@@ -26,9 +26,9 @@
     </div>
     <div class="nav-content col s12 l4 right">
       <ul id="nav-mobile" class="tabs tabs-transparent right ">
-        <li class="tab"><a class="active" href="#test1">Inicio</a></li>
-        <li class="tab"><a href="#test2">Preguntas</a></li>
-        <li class="tab"><a href="#test3">Record de Notas</a></li>
+        <li class="tab"><a class="active" href="index.php">Inicio</a></li>
+        <li class="tab"><a href="preguntas.php">Preguntas</a></li>
+        <li class="tab"><a href="records.php">Record de Notas</a></li>
       </ul>
     </div>
   </nav>
