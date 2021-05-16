@@ -11,12 +11,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link rel="stylesheet" href="styles.css">
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.modal');
-      var instances = M.Modal.init(elems);
-    });
-  </script>
+
 </head>
 
 <body>
@@ -205,7 +200,12 @@
   </div>
 
 
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
 
   <footer class="page-footer teal">
     <div class="container">
