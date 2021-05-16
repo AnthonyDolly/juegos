@@ -11,7 +11,11 @@ h1 {
 .container {
     padding: 0 1em;
 }
-
+.input-btn-login input{
+    display: block;
+    border: 1px solid #ccc;
+    outline: none;
+}
 .p {
     margin-bottom: 1em;
     padding: 15px;
@@ -54,3 +58,4 @@ input[type="button"]:hover{
     padding: 10px 30px;
 
 }
+

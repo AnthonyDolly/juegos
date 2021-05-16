@@ -10,6 +10,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
 </head>
 
 <body>
@@ -147,7 +154,7 @@
     <div class="modal-content">
       <h4>Iniciar Sesion</h4>
       <div class="row">
-        <form class="col s12">
+        <form action="validar.php" method="POST" class="col s12">
           <div class="row">
             <div class="input-field col s12 m6">
               <input placeholder="" id="dni" type="text" class="validate">
@@ -157,6 +164,10 @@
               <input placeholder="" id="password" type="password" class="validate">
               <label for="password">Contraseña</label>
             </div>
+            <div class="input-field col s12 m6">
+              <input class="validate" type="button" value="Ingresar" >
+              <input type="button" value="Cerrar" >
+            <div>
           </div>
         </form>
       </div>
@@ -193,12 +204,8 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.modal');
-      var instances = M.Modal.init(elems);
-    });
-  </script>
+
+  
 
   <footer class="page-footer teal">
     <div class="container">
@@ -237,7 +244,6 @@
       </div>
     </div>
   </footer>
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
