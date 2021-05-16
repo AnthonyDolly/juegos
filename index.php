@@ -160,9 +160,10 @@
               <label for="password">Contraseña</label>
             </div>
             <div class="input-field col s12 m6">
-              <input class="validate" type="button" value="Ingresar" >
-              <input type="button" value="Cerrar" >
-            <div>
+              <button class="btn waves-effect waves-light" type="submit" name="btnRegistrar">Iniciar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
           </div>
         </form>
       </div>
@@ -192,6 +193,11 @@
             <div class="input-field col s12 m6">
               <input placeholder="" id="password" type="password" class="validate">
               <label for="password">Password</label>
+            </div>
+            <div class="input-field col s12 m6">
+              <button class="btn waves-effect waves-light" type="submit" name="btnRegistrar">Registrarse
+                <i class="material-icons right">send</i>
+              </button>
             </div>
           </div>
         </form>
