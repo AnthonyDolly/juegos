@@ -11,8 +11,8 @@ h1 {
 .container {
     padding: 0 1em;
 }
-.input-btn-login input{
-    display: block;
+.input-btn-login button{
+    /* display: block; */
     border: 1px solid #ccc;
     outline: none;
 }

@@ -1,7 +1,6 @@
 <?php
-$conexion = mysqli_connect('localhost', 'root', '', 'juego');
+    include('conexion.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

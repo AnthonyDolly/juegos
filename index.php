@@ -152,17 +152,17 @@
         <form action="validar.php" method="POST" class="col s12">
           <div class="row">
             <div class="input-field col s12 m6">
-              <input placeholder="" id="dni" type="text" class="validate">
+              <input placeholder="" id="dni" type="text" class="validate" name="id">
               <label for="dni">DNI</label>
             </div>
             <div class="input-field col s12 m6">
-              <input placeholder="" id="password" type="password" class="validate">
+              <input placeholder="" id="password" type="password" class="validate" name="contraseña" >
               <label for="password">Contraseña</label>
             </div>
-            <div class="input-field col s12 m6">
-              <button class="btn waves-effect waves-light" type="submit" name="btnRegistrar">Iniciar
-                <i class="material-icons right">send</i>
-              </button>
+            <div class="input-field col s12 m6 input-btn-login">
+ 
+              <input class="validate" type="submit" class="Ingresar">
+        
             </div>
           </div>
         </form>
@@ -174,30 +174,28 @@
   <div id="modalRegister" class="modal">
     <div class="modal-content">
       <div class="row">
-        <form class="col s12">
+        <form action="registrar.php" method="POST" class="col s12">
           <div class="row">
             <div class="input-field col s12 m6">
-              <input placeholder="" id="names" type="text" class="validate">
+              <input placeholder="" id="names" type="text" class="validate" name="nombre" >
               <label for="names">Nombres</label>
             </div>
             <div class="input-field col s12 m6">
-              <input placeholder="" id="last_names" type="text" class="validate">
+              <input placeholder="" id="last_names" type="text" class="validate" name="apellido">
               <label for="last_names">Apellidos</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12 m6">
-              <input placeholder="" id="dni" type="text" class="validate">
+              <input placeholder="" id="dni" type="text" class="validate" name="idNew">
               <label for="dni">DNI</label>
             </div>
             <div class="input-field col s12 m6">
-              <input placeholder="" id="password" type="password" class="validate">
+              <input placeholder="" id="password" type="password" class="validate" name="contraseñaNew">
               <label for="password">Password</label>
             </div>
             <div class="input-field col s12 m6">
-              <button class="btn waves-effect waves-light" type="submit" name="btnRegistrar">Registrarse
-                <i class="material-icons right">send</i>
-              </button>
+              <input class="validate" type="submit" class="Registrar">
             </div>
           </div>
         </form>

@@ -24,6 +24,7 @@ const compararRespuestas = (arr2) => {
 
 const almacenarPuntos = (puntuacion) => {
     puntosTotales = puntuacion;
+    
     return puntosTotales;
 }
 
