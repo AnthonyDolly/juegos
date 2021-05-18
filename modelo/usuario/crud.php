@@ -1,0 +1,41 @@
+<?php
+
+require_once "modelo/conexion.php";
+
+class Datos extends Conexion
+{
+    #Ingreso usuarios
+    #---------------------
+    public function ingresoUsuarioModelo($datosModelo, $tabla)
+    {
+        $st = Conexion::conectar()->prepare("SELECT id, concat(nombres, ' ', apellidos) AS usuario, contra, puntos FROM $tabla where id = :dni");
+        $st->bindParam(":dni", $datosModelo["dni"], PDO::PARAM_STR);
+        $st->execute();
+
+        return $st->fetch();
+
+        $st->close();
+    }
+
+    #Registro usuarios
+    #------------------
+    public function registroUsuarioModelo($datosModelo, $tabla)
+    {
+        $st = Conexion::conectar()->prepare("INSERT INTO usuarios(id, nombres, apellidos, contra, puntos) 
+        VALUES(:dni,:nombres,:apellidos,:contra,:puntos)");
+
+        $st->bindParam(":dni", $datosModelo["dni"], PDO::PARAM_STR);
+        $st->bindParam(":nombres", $datosModelo["nombres"], PDO::PARAM_STR);
+        $st->bindParam(":apellidos", $datosModelo["apellidos"], PDO::PARAM_STR);
+        $st->bindParam(":contra", $datosModelo["contra"], PDO::PARAM_STR);
+        $st->bindParam(":puntos", $datosModelo["puntos"], PDO::PARAM_STR);
+
+        if ($st->execute()) {
+            return "success";
+        } else {
+            return "error";
+        }
+
+        $st->close();
+    }
+}
