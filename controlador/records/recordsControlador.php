@@ -48,7 +48,7 @@ class recordsControlador
                     echo '<div>
                     <ul class="collection">
                         <li class="collection-item avatar">
-                            <i class="material-icons circle orange">looks_one</i>
+                            <i class="material-icons circle orange">looks_two</i>
                             <span class="title">' . $i . 'do Puesto</span>
                             <p>' . $item["Nombre"] . ' <br>
                                 ' . $item["Puntuacion Total"] . '
@@ -62,7 +62,7 @@ class recordsControlador
                     echo '<div>
                     <ul class="collection">
                         <li class="collection-item avatar">
-                            <i class="material-icons circle green">looks_one</i>
+                            <i class="material-icons circle green">looks_3</i>
                             <span class="title">' . $i . 'er Puesto</span>
                             <p>' . $item["Nombre"] . ' <br>
                                 ' . $item["Puntuacion Total"] . '
@@ -76,7 +76,7 @@ class recordsControlador
                     echo '<div>
                     <ul class="collection">
                         <li class="collection-item avatar">
-                            <i class="material-icons circle red">looks_one</i>
+                            <i class="material-icons circle red">looks_4</i>
                             <span class="title">' . $i . 'to Puesto</span>
                             <p>' . $item["Nombre"] . ' <br>
                                 ' . $item["Puntuacion Total"] . '
@@ -90,7 +90,7 @@ class recordsControlador
                     echo '<div>
                     <ul class="collection">
                         <li class="collection-item avatar">
-                            <i class="material-icons circle purple">looks_one</i>
+                            <i class="material-icons circle purple">looks_5</i>
                             <span class="title">' . $i . 'to Puesto</span>
                             <p>' . $item["Nombre"] . ' <br>
                                 ' . $item["Puntuacion Total"] . '
