@@ -18,4 +18,20 @@ class DatosRecords extends Conexion
             return "error";
         }
     }
+
+    #Vista del top 5 de la tabla records
+    #-------------------------------------
+    public function vistaRecordsModelo($tabla)
+    {
+        $st = Conexion::conectar()->prepare('SELECT concat(nombres," ", apellidos) AS Nombre, puntuacion_total AS "Puntuacion Total", fecha AS "Fecha" 
+        FROM records r
+        INNER JOIN usuarios u
+        ON u.id = r.usuario_id
+        ORDER BY puntuacion_total DESC, fecha DESC 
+        LIMIT 5');
+
+        $st->execute();
+
+        return $st->fetchAll();
+    }
 }

@@ -49,6 +49,7 @@ class preguntasControlador
             </script>
             <form class="formSendAnswer" method="POST">
                 <input type="hidden" name="pts" id="pts" value=' . $_SESSION["puntos"] . '>
+                <input type="hidden" name="ptsO" id="ptsO" value=>
                 <input type="submit" class="waves-effect waves-light btn sendAnswer" value="Enviar" id="myBtn" name="myBtn" onclick="enviar2(),pt()">
             </form>
             ';

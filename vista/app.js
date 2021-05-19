@@ -53,7 +53,7 @@ function enviar2() {
         arr2.push(respuestasE)
     }
     
-    almacenarPuntos(arr2);
+    // almacenarPuntos(arr2);
 
     ptsObtenidos = almacenarPuntos(arr2);
     document.getElementById('ptsO').value = ptsObtenidos;
