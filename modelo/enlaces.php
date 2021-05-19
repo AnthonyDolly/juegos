@@ -7,7 +7,8 @@ class EnlacesPaginas
         if (
             $enlacesModelo == "preguntas" ||
             $enlacesModelo == "records" ||
-            $enlacesModelo == "cerrar-sesion"
+            $enlacesModelo == "cerrar-sesion" ||
+            $enlacesModelo == "home"
         ) {
             $modulo = "vista/modulos/" . $enlacesModelo . ".php";
         } elseif ($enlacesModelo == "index") {

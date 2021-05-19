@@ -36,8 +36,7 @@ class usuarioControlador
                 "dni" => $_POST["dniR"],
                 "nombres" => $_POST["nombres"],
                 "apellidos" => $_POST["apellidos"],
-                "password" => $_POST["passwordR"],
-                "puntos" => $_POST["puntos"]
+                "password" => $_POST["passwordR"]
             );
 
             $respuesta = Datos::registroUsuarioModelo($datosControlador, "usuarios");

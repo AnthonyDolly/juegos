@@ -38,7 +38,7 @@ function pt() {
 
     ptsActual = document.getElementById("pts").value;
     ptsActual = (ptsActual) * 1 + pts;
-    
+
     document.getElementById("pts").value = ptsActual;
 }
 
@@ -52,12 +52,12 @@ function enviar2() {
         console.log(respuestasE)
         arr2.push(respuestasE)
     }
-    
+
     // almacenarPuntos(arr2);
 
     ptsObtenidos = almacenarPuntos(arr2);
     document.getElementById('ptsO').value = ptsObtenidos;
-    
+
 }
 
 
@@ -82,6 +82,13 @@ function Usuario(fullName, id) {
             </div>
         </span>
         <ul class="username-sublist">
+            <li class="username-subitem">
+                <a href="index.php?action=home">
+                    <div>
+                        <img src="vista/img/perfil.svg" alt="mi perfil"> Mi Perfil
+                    </div>
+                </a>
+            </li>
             <li class="username-subitem">
                 <a href="index.php?action=cerrar-sesion">
                     <div>

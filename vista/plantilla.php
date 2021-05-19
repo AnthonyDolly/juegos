@@ -53,7 +53,7 @@ ob_start();
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="vista/js/materialize.js"></script>
     <script src="vista/js/init.js"></script>
-    
+
 
 
     <?php
