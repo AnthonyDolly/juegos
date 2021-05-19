@@ -47,16 +47,9 @@ class preguntasControlador
             <script type="text/javascript">
                 almacenarRC(arr);
             </script>
-<<<<<<< HEAD
-            <form method="POST">
-                <input type="text" name="pts" id="pts" value=' . $_SESSION["puntos"] . '>
-                <input type="hidden" name="ptsO" id="ptsO" value>
-                <input type="submit" value="Enviar" id="myBtn" name="myBtn" onclick="enviar2(),pt()">
-=======
             <form class="formSendAnswer" method="POST">
                 <input type="hidden" name="pts" id="pts" value=' . $_SESSION["puntos"] . '>
                 <input type="submit" class="waves-effect waves-light btn sendAnswer" value="Enviar" id="myBtn" name="myBtn" onclick="enviar2(),pt()">
->>>>>>> refs/remotes/origin/main
             </form>
             ';
     }
