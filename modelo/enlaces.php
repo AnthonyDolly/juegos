@@ -18,7 +18,7 @@ class EnlacesPaginas
             $modulo = "vista/modulos/inicio.php";
         } else {
             $modulo = "vista/modulos/inicio.php";
-        }
+        } 
         return $modulo;
     }
 }

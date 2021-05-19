@@ -15,6 +15,9 @@ if (!$_SESSION["validar"]) {
         
         $actualizar = new usuarioControlador();
         $actualizar -> actualizarUsuarioPuntosControlador();
+
+        $records = new recordsControlador();
+        $records -> registroRecordsControlador();
         ?>
     </div>
 </div>

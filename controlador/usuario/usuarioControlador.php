@@ -20,7 +20,7 @@ class usuarioControlador
                 $_SESSION["username"] = $respuesta["usuario"];
                 $_SESSION["puntos"] = $respuesta["puntos"];
                 $_SESSION["validar"] = true;
-                header("location:index.php?action=inicio");
+                header('location:index.php?action=inicio&pts='.$respuesta["puntos"].'');
             } else {
                 header("location:index.php?action=fallo");
             }
@@ -62,12 +62,10 @@ class usuarioControlador
             $respuesta = Datos::actualizarUsuarioPuntosModelo($datosControlador, "usuarios");
 
             if ($respuesta == "success") {
-                header('location:index.php?action=mi-perfil&dni=' . $_SESSION["dni"] . '');
+                header('location:index.php?action=inicio&pts=' . $_GET["pts"] . '');
             } else {
                 header("location:index.php");
             }
-     }
-
-        
+        }
     }
 }

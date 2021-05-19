@@ -32,26 +32,32 @@ const almacenarPuntos = (respuestasE) => {
 }
 
 var pts = 0;
+
 function pt() {
     pts = puntosTotales;
 
     ptsActual = document.getElementById("pts").value;
     ptsActual = (ptsActual) * 1 + pts;
-    console.log(ptsActual);
+    
     document.getElementById("pts").value = ptsActual;
 }
 
 
 function enviar2() {
     respuestasE = [];
+    var ptsObtenidos = 0;
     var arr2 = [];
     for (var i = 1; i <= 10; i++) {
         respuestasE = document.getElementById(`respuesta${i}`).value;
         console.log(respuestasE)
         arr2.push(respuestasE)
     }
+    
     almacenarPuntos(arr2);
 
+    ptsObtenidos = almacenarPuntos(arr2);
+    document.getElementById('ptsO').value = ptsObtenidos;
+    
 }
 
 

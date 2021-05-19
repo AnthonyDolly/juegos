@@ -5,10 +5,10 @@ require_once "modelo/enlaces.php";
 require_once "controlador/enlaces.php";
 require_once "controlador/usuario/usuarioControlador.php";
 require_once "controlador/preguntas/preguntasControlador.php";
-// require_once "controlador/puntuaciones/puntuacionesControlador.php";
+require_once "controlador/records/recordsControlador.php";
 require_once "modelo/usuario/crud.php";
 require_once "modelo/preguntas/crud.php";
-// require_once "modelo/puntuaciones/crud.php";
+require_once "modelo/records/crud.php";
 
 $mvc = new MvcControlador();
 $mvc->plantilla();
