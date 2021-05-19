@@ -14,7 +14,7 @@ class Datos extends Conexion
 
         return $st->fetch();
 
-        $st->close();
+        // $st->close();
     }
 
     #Registro usuarios
@@ -36,6 +36,24 @@ class Datos extends Conexion
             return "error";
         }
 
-        $st->close();
+        // $st->close();
+    }
+
+    #Actualizar puntos del Usuario
+    #---------------------------------
+    public function actualizarUsuarioPuntosModelo($datosModelo, $tabla)
+    {
+        $st = Conexion::conectar()->prepare("UPDATE $tabla SET puntos = puntos + :puntos WHERE id = :dni");
+
+        $st->bindParam(":puntos", $datosModelo["puntos"], PDO::PARAM_INT);
+        $st->bindParam(":dni", $datosModelo["dni"], PDO::PARAM_STR);
+
+        if ($st->execute()) {
+            return "success";
+        } else {
+            "error";
+        }
+
+        // $st->close();
     }
 }

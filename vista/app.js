@@ -10,7 +10,7 @@ const almacenarRC = (respuestasCorrectas) => {
 const compararRespuestas = (arr2) => {
     console.log('Respuestas correctas: ' + respuestasC);
     console.log('Respuestas enviadas: ' + arr2);
-    let puntuacion = 0;
+    var puntuacion = 0;
     for (j = 0; j < 10; j++) {
         if ((respuestasC[j] == arr2[j])) {
             puntuacion = puntuacion + 2;
@@ -22,12 +22,19 @@ const compararRespuestas = (arr2) => {
     return puntuacion;
 }
 
-const almacenarPuntos = (puntuacion) => {
-    puntosTotales = puntuacion;
+const almacenarPuntos = (respuestasE) => {
+    // compararRespuestas(respuestasE);
 
+    puntosTotales = compararRespuestas(respuestasE);
+
+    console.log(puntosTotales);
     return puntosTotales;
 }
 
+// function pts() {
+//     var pts = 0;
+//     pts = puntosTotales;
+// }
 
 
 function enviar2() {
@@ -38,7 +45,7 @@ function enviar2() {
         console.log(respuestasE)
         arr2.push(respuestasE)
     }
-    compararRespuestas(arr2);
+    almacenarPuntos(arr2);
 
 }
 

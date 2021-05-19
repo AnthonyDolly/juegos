@@ -11,7 +11,10 @@ if (!$_SESSION["validar"]) {
     <div class="container" id="container">
         <?php
         $vista = new preguntasControlador();
-        $vista->vistaPreguntasControlador();
+        $vista -> vistaPreguntasControlador();
+        
+        $actualizar = new usuarioControlador();
+        $actualizar -> actualizarUsuarioPuntosControlador();
         ?>
     </div>
 </div>

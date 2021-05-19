@@ -6,7 +6,7 @@ class preguntasControlador
     #----------------------------
     public function vistaPreguntasControlador()
     {
-        $datosControlador = '10203040';
+        $datosControlador = $_SESSION["dni"];
         $respuesta = DatosPreguntas::vistaPreguntasModelo($datosControlador, "preguntas");
 
         echo '
@@ -47,7 +47,7 @@ class preguntasControlador
             <script type="text/javascript">
                 almacenarRC(arr);
             </script> 
-            <input type="button" value="Enviar" onclick="enviar2()" id="myBtn">
+            <input type="button" value="Enviar" id="myBtn" name="myBtn" onclick="enviar2()">
             ';
     }
 }

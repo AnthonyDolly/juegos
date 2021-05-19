@@ -27,6 +27,8 @@ class usuarioControlador
         }
     }
 
+    #Registro de Usuario
+    #--------------------------
     public function registroUsuarioControlador()
     {
         if (isset($_POST["dniR"])) {
@@ -42,6 +44,25 @@ class usuarioControlador
 
             if ($respuesta == "success") {
                 header("location:index.php?action=ok");
+            } else {
+                header("location:index.php");
+            }
+        }
+    }
+
+    #Actualizar puntos del Usuario
+    #-----------------------------------
+    public function actualizarUsuarioPuntosControlador()
+    {
+        if (isset($_POST["puntos"])) {
+            $datosControlador = array(
+                "dni" => $_SESSION["dni"],
+                "puntos" => 10
+            );
+            $respuesta = Datos::actualizarUsuarioPuntosModelo($datosControlador, "usuarios");
+
+            if ($respuesta == "success") {
+                header('location:index.php?action=mi-perfil&dni=' . $_SESSION["dni"] . '');
             } else {
                 header("location:index.php");
             }
