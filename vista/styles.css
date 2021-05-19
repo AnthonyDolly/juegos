@@ -61,6 +61,7 @@ input[type="button"]:hover{
 
 .username-list-item {
     position: relative;
+    /* cursor: pointer; */
 }
 
 .username-list-item > span {
@@ -106,4 +107,24 @@ span .flecha {
     width: 18px;
     height: 18px;
     vertical-align: middle;
+}
+
+
+.formSendAnswer, .blockSend{
+    text-align: center;
+}
+@media (max-width: 575.98px) { 
+    .blockSend{
+        text-align: end;
+    }
+}
+.text-center{text-align: center;}
+.formSendAnswer{
+    margin: 3rem 0;
+}
+.sendAnswer input{
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }

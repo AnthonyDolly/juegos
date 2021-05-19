@@ -22,8 +22,11 @@
                         <input placeholder="" id="passwordR" type="password" class="validate" name="passwordR">
                         <label for="passwordR">Password</label>
                     </div>
-                    <div class="input-field col s12 m6">
-                        <input class="validate" type="submit" class="Registrar">
+                    <div class="input-field col s12 blockSend">
+                        <input class="waves-effect waves-light btn sendAnswer validate" type="submit" class="Registrar">
+                    </div>
+                    <div class="text-center" >
+                        <p>¿Ya tienes una cuenta? <a href="sass.html"> Inicia Sesión </a></p>
                     </div>
                 </div>
             </form>
