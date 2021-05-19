@@ -43,7 +43,7 @@ class Datos extends Conexion
     #---------------------------------
     public function actualizarUsuarioPuntosModelo($datosModelo, $tabla)
     {
-        $st = Conexion::conectar()->prepare("UPDATE $tabla SET puntos = puntos + :puntos WHERE id = :dni");
+        $st = Conexion::conectar()->prepare("UPDATE $tabla SET puntos = :puntos WHERE id = :dni");
 
         $st->bindParam(":puntos", $datosModelo["puntos"], PDO::PARAM_INT);
         $st->bindParam(":dni", $datosModelo["dni"], PDO::PARAM_STR);

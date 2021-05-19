@@ -31,10 +31,15 @@ const almacenarPuntos = (respuestasE) => {
     return puntosTotales;
 }
 
-// function pts() {
-//     var pts = 0;
-//     pts = puntosTotales;
-// }
+var pts = 0;
+function pt() {
+    pts = puntosTotales;
+
+    ptsActual = document.getElementById("pts").value;
+    ptsActual = (ptsActual) * 1 + pts;
+    console.log(ptsActual);
+    document.getElementById("pts").value = ptsActual;
+}
 
 
 function enviar2() {

@@ -54,10 +54,10 @@ class usuarioControlador
     #-----------------------------------
     public function actualizarUsuarioPuntosControlador()
     {
-        if (isset($_POST["puntos"])) {
+        if (isset($_POST["pts"])) {
             $datosControlador = array(
                 "dni" => $_SESSION["dni"],
-                "puntos" => 10
+                "puntos" => $_POST["pts"]
             );
             $respuesta = Datos::actualizarUsuarioPuntosModelo($datosControlador, "usuarios");
 
@@ -66,6 +66,8 @@ class usuarioControlador
             } else {
                 header("location:index.php");
             }
-        }
+     }
+
+        
     }
 }

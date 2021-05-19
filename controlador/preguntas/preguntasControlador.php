@@ -46,8 +46,11 @@ class preguntasControlador
         echo '
             <script type="text/javascript">
                 almacenarRC(arr);
-            </script> 
-            <input type="button" value="Enviar" id="myBtn" name="myBtn" onclick="enviar2()">
+            </script>
+            <form method="POST">
+                <input type="hidden" name="pts" id="pts" value=' . $_SESSION["puntos"] . '>
+                <input type="submit" value="Enviar" id="myBtn" name="myBtn" onclick="enviar2(),pt()">
+            </form>
             ';
     }
 }
