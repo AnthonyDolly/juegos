@@ -44,7 +44,7 @@ class usuarioControlador
             if ($respuesta == "success") {
                 header("location:index.php?action=ok");
             } else {
-                header("location:index.php");
+                header("location:index.php?action=fallo");
             }
         }
     }

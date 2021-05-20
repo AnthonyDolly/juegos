@@ -26,7 +26,7 @@
                         <input class="waves-effect waves-light btn sendAnswer validate" type="submit" class="Registrar">
                     </div>
                     <div class="text-center">
-                        <p>¿Ya tienes una cuenta? <a href="#modalLogin"> Inicia Sesión </a></p>
+                        <p>¿Ya tienes una cuenta? <a href="#!"> Inicia Sesión </a></p>
                     </div>
                 </div>
             </form>

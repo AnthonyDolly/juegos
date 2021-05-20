@@ -21,13 +21,13 @@ class Datos extends Conexion
     #------------------
     public function registroUsuarioModelo($datosModelo, $tabla)
     {
-        $st = Conexion::conectar()->prepare("INSERT INTO usuarios(id, nombres, apellidos, contra, puntos) 
+        $st = Conexion::conectar()->prepare("INSERT INTO $tabla(id, nombres, apellidos, contra, puntos) 
         VALUES(:dni,:nombres,:apellidos,:contra,0)");
 
         $st->bindParam(":dni", $datosModelo["dni"], PDO::PARAM_STR);
         $st->bindParam(":nombres", $datosModelo["nombres"], PDO::PARAM_STR);
         $st->bindParam(":apellidos", $datosModelo["apellidos"], PDO::PARAM_STR);
-        $st->bindParam(":contra", $datosModelo["contra"], PDO::PARAM_STR);
+        $st->bindParam(":contra", $datosModelo["password"], PDO::PARAM_STR);
 
         if ($st->execute()) {
             return "success";
